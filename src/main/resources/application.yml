@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://ep-aged-union-a4juy078-pooler.us-east-1.aws.neon.tech/eCom
+    username: eCom_owner
+    password: npg_PnWkBg0QSx4F
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10  # Adjust this based on your app's load requirements
+  jpa:
+    hibernate:
+      ddl-auto: update  # Can be 'update', 'validate', 'create', or 'create-drop' based on your needs
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  jackson:
+    serialization:
+      fail-on-empty-beans: false  # Disable error on empty beans during JSON serialization
